@@ -1,0 +1,112 @@
+section.portfolio {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2098D1;
+}
+
+ul.portfolio-list {
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2.5% 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+li.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  width: 48%;
+  text-align: center;
+  margin: 15px 0;
+  border-radius: 6px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .1s;
+}
+
+li.portfolio-item img {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  transition: .2s;
+}
+
+
+h1.title-portfolio {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Raleway';
+  color: #fff;
+}
+
+a.wrapper-project-item:hover > .img-project {
+  width: 110%;
+}
+
+
+a.wrapper-project-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.portofolio-name {
+  color: #ffffff;
+  font-family: 'Raleway';
+  font-size: 18px;
+  display: block;
+  width: 95%;
+  z-index: 4;
+}
+
+@keyframes background { 
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media(max-width: 768px){
+  li.portfolio-item {
+    width: 450px;
+  }
+}
+
+@media(max-width: 640px){
+  li.portfolio-item {
+    width: 400px;
+  }
+}
+
+@media(max-width: 480px){
+  li.portfolio-item {
+    width: 90%;
+  }
+}

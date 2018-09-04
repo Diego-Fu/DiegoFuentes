@@ -1,0 +1,145 @@
+footer {
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  background-color:#293347;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a.social-item {
+  padding: 0 20px;
+}
+
+a.social-item, a.social-item img {
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+}
+
+a.social-item img:hover {
+  transform: scale(1.3);
+}
+
+.footer-text{
+  font-family: 'Raleway';
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 120px;
+}
+
+form.form-contact {
+  max-width: 640px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 120px 0;
+  box-sizing: border-box;
+}
+
+h3.contact-title{
+  font-family: 'Raleway';
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.input-form {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  font-size: 24px;
+  border: 0;
+  padding: 15px;
+  background: none;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+  font-family: 'Raleway';
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-form::placeholder {
+  color: rgba(255,255,255,.3);
+  font-family: 'Raleway';
+}
+
+.input-form:focus {
+  border: 1px solid #fff;
+}
+
+button.submit-contact {
+  background: none;
+  border: 1px solid #000000;
+  padding: 15px 0;
+  width: 100%;
+  color: #000000;
+  font-family: 'Raleway';
+  font-size: 24px;
+  margin-top: 15px;
+  transition: .2s;
+}
+
+button.submit-contact.complete-form {
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+button.submit-contact.complete-form:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  transform: scale(1.1);
+}
+
+span.visit-site {
+  z-index: 3;
+  border: 1px solid #2098D1;
+  margin-top: 8px;
+  color: #ffffff;
+  padding: 5px;
+  font-family: 'Raleway'
+}
+
+@media(max-width: 768px){
+  form.form-contact {
+    margin: 0;
+  }
+
+  .social-networks {
+    margin-top: 60px;
+  }
+}
+
+@media(max-width: 640px){
+  h3.contact-title{
+    font-size: 28px;
+  }
+
+  .input-form {
+    font-size: 20px;
+  }
+
+  a.social-item, a.social-item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media(max-width: 480px){
+  h3.contact-title{
+    font-size: 26px;
+  }
+  
+  a.social-item, a.social-item img {
+    width: 30px;
+    height: 30px;
+  }
+}

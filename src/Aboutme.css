@@ -1,0 +1,226 @@
+section.about-me{
+  background-color: #06BC9B;
+  background-image: -webkit-gradient(linear,left top,right top,from(#06BC9B),to(#1ba49c));
+  background-image: -webkit-linear-gradient(left,#06BC9B,#1ba49c);
+  background-image: -moz-linear-gradient(left,#06BC9B,#1ba49c);
+  background-image: -ms-linear-gradient(left,#06BC9B,#1ba49c);
+  background-image: -o-linear-gradient(left,#06BC9B,#1ba49c);
+  padding: 120px 0;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about-me-wrapper-text {
+  max-width: 1600px;
+  width: 90%;
+  height: auto;
+  background: #f5f6f7;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.skills-list-wrapper{
+  max-width: 1600px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+p.about-me-text {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 840px;
+  width: 90%;
+  color: #63707e;
+  font-size: 24px;
+  font-family: 'Raleway';
+  text-align: center;
+
+}
+
+.skills {
+  max-width: 1600px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+img.skill-icon {
+  width: 120px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.skill-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  margin: 0 10px;
+  background-color: #f5f6f7;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+h3.skill-name {
+  font-size: 28px;
+  font-family: 'Raleway';
+  color: #63707e;
+  text-align: center;
+}
+
+p.skill-desc {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Raleway';
+  color: #63707e;
+}
+
+.skills-list-wrapper {
+  margin: 0 auto;
+}
+
+h3.skills-title {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Raleway';
+  color: #000000;
+}
+
+h4.skill-subtitle {
+  color: #ffffff;
+  font-size: 22px;
+  font-family: 'Raleway';
+}
+
+li.skill-item-tool{
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Raleway';
+  margin: 5px 0;
+}
+
+ul.skill-list {
+  list-style-type: none;
+}
+
+@media(max-width: 1024px){
+  section.about-me{
+    padding: 80px 0;
+  }
+
+  p.about-me-text {
+    font-size: 20px;
+  }
+
+  .about-me-wrapper-text, .skills-list-wrapper{
+    width: 80%;
+  }
+
+  .skills {
+    width: 90%;
+  }
+
+  .skill-block-wrapper ul.skill-list {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .skill-block-wrapper {
+    width: 50%;
+  }
+
+  h4.skill-subtitle{
+    text-align: center;
+  }
+}
+
+@media(max-width: 768px){
+  section.about-me{
+    padding: 60px 0;
+    justify-content: flex-start;
+  }
+
+  p.about-me-text {
+    font-size: 18px;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .skills, .about-me-wrapper-text, {
+    width: 90%;
+  }
+
+  .skills-list-wrapper{
+    width: 100%;
+  }
+
+  h3.skills-title {
+    margin: 0;
+  }
+  
+  h4.skill-subtitle{
+    font-size: 18px;
+  }
+
+  li.skill-item-tool{
+    font-size: 16px;
+  }
+
+}
+
+@media(max-width: 640px){
+  section.about-me{
+    padding: 30px 0;
+  }
+
+  p.about-me-text {
+    font-size: 16px;
+  }
+
+  section.portfolio {
+    padding: 30px 0;
+  }
+}
+
+@media(max-width: 480px){
+  section.about-me{
+    padding: 20px 0;
+  }
+
+  .skill-block-wrapper ul.skill-list{
+    width: 90%;
+  }
+
+  .skill-block-wrapper {
+    width: 100%;
+  }
+}
+
