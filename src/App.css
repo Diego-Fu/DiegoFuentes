@@ -7,6 +7,10 @@ html, body {
   box-sizing: border-box;
 }
 
+textarea{
+  resize: none;
+}
+
 .banner-wrapper {
   position: relative;
   width: 100%;

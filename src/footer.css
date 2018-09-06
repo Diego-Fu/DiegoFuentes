@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   height: auto;
-  min-height: 80vh;
+  padding: 60px 0;
   background-color:#293347;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,6 @@ form.form-contact {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 120px 0;
   box-sizing: border-box;
 }
 
@@ -49,6 +48,10 @@ h3.contact-title{
   color: #fff;
   font-size: 32px;
   text-align: center;
+}
+
+.social-networks {
+  margin-top: 50px;
 }
 
 .input-form {
@@ -116,6 +119,10 @@ span.visit-site {
   .social-networks {
     margin-top: 60px;
   }
+
+  .footer-text{
+    padding-bottom: 60px;
+  }
 }
 
 @media(max-width: 640px){
@@ -130,6 +137,10 @@ span.visit-site {
   a.social-item, a.social-item img {
     width: 40px;
     height: 40px;
+  }
+
+  .footer-text{
+    padding-bottom: 30px;
   }
 }
 

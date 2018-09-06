@@ -5,7 +5,7 @@ section.about-me{
   background-image: -moz-linear-gradient(left,#06BC9B,#1ba49c);
   background-image: -ms-linear-gradient(left,#06BC9B,#1ba49c);
   background-image: -o-linear-gradient(left,#06BC9B,#1ba49c);
-  padding: 120px 0;
+  padding: 60px 0;
   height: auto;
   min-height: 100vh;
   display: flex;
@@ -103,7 +103,9 @@ h3.skills-title {
   text-align: center;
   font-size: 28px;
   font-family: 'Raleway';
-  color: #000000;
+  color: white;
+  margin: 0;
+  margin-top: 50px;
 }
 
 h4.skill-subtitle {

@@ -22,18 +22,17 @@ export default class App extends Component {
 
   componentDidMount(){
     ViewportBuggyfill.init();
+  
+    this.checkSelectedLanguage();
   }
 
-  switchLanguage(langSelector) {
-    if (langSelector === 'es') {
-      this.setState({ langSelected: lang.es })
-    } else {
+  checkSelectedLanguage(){
+    const lang = window.location.pathname.replace(/^\/([^\/]*).*$/, '$1');
 
-      this.setState({ langSelected: lang.en })
+    if(lang === 'en'){
+      this.switchLanguage('en');
     }
-
   }
-
 
   render() {   
     return (
@@ -41,11 +40,11 @@ export default class App extends Component {
 
         <section className="banner-wrapper" id="banner">
           <div className="lang-selector">
-            <span className="lang-btn" onClick={() => { this.switchLanguage('es') }}>ES</span>
-            <span className="lang-btn" onClick={() => { this.switchLanguage('en') }}>EN</span>
+            <span className="lang-btn" onClick={() => { this.setState({langSelected: lang.es}) }}>ES</span>
+            <span className="lang-btn" onClick={() => { this.setState({langSelected: lang.en}) }}>EN</span>
           </div>
 
-          <Typing speed={50} className="main-banner-content">
+          <Typing speed={30} className="main-banner-content">
             <img src={require('./assets/profile.jpg')} alt="Diego Fuentes" />
             <span className="banner-title"> {this.state.langSelected.title} <br /> {this.state.langSelected.role} </span>
           </Typing>
@@ -115,7 +114,7 @@ export default class App extends Component {
         <section className="about-me" id="about-me">
           <div className="about-me-wrapper-text">
             <p className="about-me-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos eveniet porro non quis consectetur iste quas ducimus explicabo impedit, adipisci quos vero suscipit eius vitae sequi ratione, itaque modi?
+              {this.state.langSelected.description}
             </p>
           </div>
 
@@ -123,20 +122,20 @@ export default class App extends Component {
             <div className="skill-item">
               <img src={require('./assets/web.svg')} alt="" className="skill-icon"/>
 
-              <h3 className="skill-name">Web Development</h3>
+              <h3 className="skill-name">{this.state.langSelected.services[0].title}</h3>
 
               <p className="skill-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloribus suscipit iure nisi. Ipsum fuga, qui, velit reiciendis ut quis similique ipsam explicabo laborum ea itaque enim quos esse consequatur.
+                {this.state.langSelected.services[0].description}
               </p>
             </div>
 
             <div className="skill-item">
               <img src={require('./assets/mobile-app.svg')} alt="" className="skill-icon" />
 
-              <h3 className="skill-name">App Development</h3>
+              <h3 className="skill-name">{this.state.langSelected.services[1].title}</h3>
 
               <p className="skill-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloribus suscipit iure nisi. Ipsum fuga, qui, velit reiciendis ut quis similique ipsam explicabo laborum ea itaque enim quos esse consequatur.
+                {this.state.langSelected.services[1].description}
               </p>
             </div>
           </div>
@@ -210,7 +209,7 @@ export default class App extends Component {
                     <img className="img-project" src={project.img} alt="" />
                     <span className="portofolio-name">{project.name}</span>
 
-                    <span className="visit-site">VISIT SITE</span>
+                    <span className="visit-site">{this.state.langSelected.visitSiteTitle}</span>
                   </a>
                 </li>
               ) 
@@ -222,14 +221,14 @@ export default class App extends Component {
         <footer>
        
           <form action="" className="form-contact">
-            <h3 className="contact-title">Let's Work together!</h3>
+            <h3 className="contact-title">{this.state.langSelected.formTitle}</h3>
          
-            <input className="input-form" type="text" name="name" id="name" placeholder="name"/>
-            <input className="input-form" type="text" name="subject" id="subject" placeholder="subject" />
+            <input className="input-form" type="text" name="name" id="name" placeholder={this.state.langSelected.formInput[0]}/>
+            <input className="input-form" type="text" name="subject" id="subject" placeholder={this.state.langSelected.formInput[1]} />
             <input className="input-form" type="email" name="email" id="email" placeholder="email"/>
-            <textarea className="input-form" name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+            <textarea className="input-form" name="message" id="message" cols="30" rows="5" placeholder={this.state.langSelected.formInput[3]}></textarea>
           
-            <button className="submit-contact complete-form" type="submit">Submit</button>
+            <button className="submit-contact complete-form" type="submit">{this.state.langSelected.formInput[4]}</button>
           </form>
 
           <div className="social-networks">

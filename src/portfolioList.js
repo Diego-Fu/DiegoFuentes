@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       name: 'GIT Instructores Tácticos',
-      url: 'https://diego-fu.github.io/GitWeb/',
+      url: 'http://instructorestacticos.com',
       img: './assets/banner.jpg'
     },
     {
