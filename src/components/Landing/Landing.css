@@ -20,10 +20,13 @@ textarea{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('./assets/banner.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   text-align: center;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .banner-title {
@@ -98,7 +101,7 @@ img.arrow-down {
   position: absolute;
   top: 15px;
   right: 30px;
-  border: 1px solid #fff;
+  border: 1px solid #787FFF;
   border-radius: 50px;
   padding: 8px 7px;
   z-index: 3;
@@ -106,19 +109,20 @@ img.arrow-down {
 
 .lang-btn {
   padding: 8px;
-  color: #ffffff;
+  color: #787FFF;
   font-family: 'Raleway';
   transition: .2s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .lang-btn:first-child {
-  border-right: 1px solid #fff;
+  border-right: 1px solid #787FFF;
   padding-right: 10px;
 }
 
 .lang-btn:hover {
-  color: #000000;
+  color: #BC3B25;
 }
 
 .main-banner-content {
@@ -160,6 +164,11 @@ img.arrow-down {
 @media(max-width: 768px){
   .banner-title {
     font-size: 24px;
+  }
+
+  .lang-selector {
+    top: 8px;
+    right: 5px;
   }
 }
 

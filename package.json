@@ -2,15 +2,15 @@
   "name": "diegofu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://diego-fu.github.io/DiegoFuentes/",
+  "homepage": "https://diegofuentes.xyz",
   "dependencies": {
     "normalize.css": "^8.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-particles-js": "^2.3.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
-    "react-typing-animation": "^1.4.0",
-    "smoothscroll": "^0.4.0",
+    "react-typist": "^2.0.4",
+    "redux": "^4.0.0",
     "viewport-units-buggyfill": "^0.6.2"
   },
   "scripts": {

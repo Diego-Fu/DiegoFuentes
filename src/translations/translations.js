@@ -1,5 +1,5 @@
 module.exports = {
-  es:{
+  es: {
     title: 'Hola!, Soy Diego Fuentes',
     role: 'Desarrollador Web y Apps Móviles',
     aboutme: 'Conoce más sobre mí!',
@@ -9,14 +9,13 @@ module.exports = {
       {
         title: 'Web',
         description: 'Hago sitios web a la medida, desde cero'
-      } ,
+      },
       {
         title: 'Apps Móviles',
         description: 'Hago apps nativas, para iOS y Android'
-      }  
+      }
     ],
     skillTitle: 'Habilidades técnicas',
-    portfolioTitle: 'Portafolio',
     visitSiteTitle: 'Visitar Sitio',
     formTitle: 'Comencemos un proyecto',
     formInput: ['nombre', 'asunto', 'email', 'mensaje', 'Enviar']
@@ -39,8 +38,7 @@ module.exports = {
       }
     ],
     skillTitle: 'Skills',
-    portfolioTitle: 'Portfolio',
-    visitSiteTitle: 'Visit Site', 
+    visitSiteTitle: 'Visit Site',
     formTitle: "Let's Work together!",
     formInput: ['name', 'subject', 'email', 'message', 'send']
   }
