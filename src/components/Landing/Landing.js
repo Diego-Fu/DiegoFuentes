@@ -5,22 +5,20 @@ import { switchLanguage } from '../../actions/index';
 import './Landing.css';
 
 export default class Landing extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      language: 'es'
-    }
-  }
-
-  componentDidMount(){
-    this.background();
-
-    store.subscribe(() => {
+  componentWillMount(){
+   store.subscribe(() => {
       this.setState({
         language: store.getState().language
       });
     });
+
+    this.setState({
+      language: store.getState().language
+    })
+  }
+
+  componentDidMount(){
+    this.background();
   }
 
   setLanguage = (language) => {
@@ -147,27 +145,41 @@ export default class Landing extends Component {
 
   render() {   
     return (
-      <div className="content-wrapper">
-        <section className="banner-wrapper" id="banner">
-          <canvas></canvas>
+      <section className="banner-wrapper" id="banner">
+        <canvas></canvas>
 
-          <div className="lang-selector">
-            <Link className="lang-btn" onClick={() => { this.setLanguage('es') }} to="/">ES</Link>
-            <Link className="lang-btn" onClick={() => { this.setLanguage('en') }} to="/en">EN</Link>
-          </div>
+        <div className="lang-selector">
+          <Link 
+            className="lang-btn" 
+            onClick={() => { this.setLanguage('es') }} 
+            to="/">
+              ES
+          </Link>
+          
+          <Link 
+            className="lang-btn" 
+            onClick={() => { this.setLanguage('en') }} 
+            to="/en">
+              EN
+          </Link>
+        </div>
 
-          <div className="main-banner-content">
-            <img src={require('../../assets/profile.jpg')} alt="Diego Fuentes" />
-            <span className="banner-title"> {store.getState().languageData[this.state.language].title} </span>
-            
-          </div>
+        <div className="main-banner-content">
+          <img src={require('../../assets/profile.jpg')} alt="Diego Fuentes" />
+          
+          <span className="banner-title">
+           {store.getState().languageData[this.state.language].title} 
+          </span>
+        </div>
 
-          <a href="#about-me" className="scroll-arrow">
-            <span className="scroll-text"> scrooll </span>
-            <img className="arrow-down" src={require('../../assets/down-arrow.svg')} alt="scroll down" />          
-          </a>
-        </section> 
-      </div>
+        <a href="#about-me" className="scroll-arrow">
+          <span className="scroll-text"> 
+            {store.getState().languageData[this.state.language].aboutme} 
+          </span>
+
+          <img className="arrow-down" src={require('../../assets/down-arrow.svg')} alt="scroll down" />          
+        </a>
+      </section> 
     );
   }
 }
