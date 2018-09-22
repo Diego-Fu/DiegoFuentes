@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { store } from '../../stores/index'; 
-import projectList from '../../portfolioList';
+import { server } from '../../config.js';
 import './Portfolio.css';
 
 export default class Portfolio extends Component {
@@ -9,7 +9,7 @@ export default class Portfolio extends Component {
     super(props);
 
     this.state = {
-      projectsList: projectList
+      projectsList: []
     }
   }
 
@@ -18,6 +18,10 @@ export default class Portfolio extends Component {
   }
 
   componentDidMount() {
+    fetch(server + '/projects').then(r => r.json())
+      .then(data => this.setState({ projectsList: data.projects }))
+      .catch(e => console.error('Something went wrong'));
+
     store.subscribe(() => {
       this.updateLanguage();
     });
@@ -37,15 +41,12 @@ export default class Portfolio extends Component {
 
         <ul className="portfolio-list">
           {
-            this.state.projectsList.projects.map((project, i) => {
+            this.state.projectsList.map((project, i) => {
               return (
-                <li
-                  key={i}
-                  className="portfolio-item"
-                >
+                <li key={i} className="portfolio-item">
                   <a href={project.url} target="_blank" className="wrapper-project-item">
-                    <img className="img-project" src={project.img} alt="" />
-                    <span className="portofolio-name">{project.name}</span>
+                    <img className="img-project" src={project.picture} alt="" />
+                    <span className="portofolio-name">{project.title}</span>
 
                     <span className="visit-site">{store.getState().languageData[this.state.language].visitSiteTitle}</span>
                   </a>
@@ -53,7 +54,7 @@ export default class Portfolio extends Component {
               )
             })
           }
-        </ul>
+        </ul> 
       </section>
     );
   }

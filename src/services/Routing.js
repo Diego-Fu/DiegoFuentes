@@ -4,6 +4,7 @@ import viewportUnitsBuggyfill from 'viewport-units-buggyfill'
 
 import Home from '../components/Home/Home';
 import Footer from '../components/Footer/Footer';
+import Blog from '../components/Blog/Blog';
 
 export default class Routing extends Component {
   componentDidMount(){
@@ -15,7 +16,8 @@ export default class Routing extends Component {
         <Router>
           <div>
             <div>
-              <Route path={'/' || '/en' || '/es'}  component={Home} />
+              <Route path="/(|en)/" exact  component={Home} />
+              <Route path={'/blog'} exact component={Blog} />
             </div>
             <Footer />
           </div>
