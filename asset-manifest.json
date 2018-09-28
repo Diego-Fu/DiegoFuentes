@@ -1,15 +1,14 @@
 {
-  "main.css": "static/css/main.6e03435e.css",
-  "main.css.map": "static/css/main.6e03435e.css.map",
-  "main.js": "static/js/main.8262e75c.js",
-  "main.js.map": "static/js/main.8262e75c.js.map",
-  "static/media/banner.jpg": "static/media/banner.e77162e1.jpg",
+  "main.css": "static/css/main.306347ba.css",
+  "main.css.map": "static/css/main.306347ba.css.map",
+  "main.js": "static/js/main.d18efa92.js",
+  "main.js.map": "static/js/main.d18efa92.js.map",
   "static/media/down-arrow.svg": "static/media/down-arrow.291c60c5.svg",
   "static/media/envelope.svg": "static/media/envelope.eb592deb.svg",
+  "static/media/git_iphone.png": "static/media/git_iphone.4ab9bf15.png",
   "static/media/github-logo.svg": "static/media/github-logo.dec21930.svg",
   "static/media/linkedin-logo.svg": "static/media/linkedin-logo.1a230b1b.svg",
-  "static/media/mobile-app.svg": "static/media/mobile-app.4504fc57.svg",
-  "static/media/profile.jpg": "static/media/profile.2da59c65.jpg",
-  "static/media/twitter-logo-silhouette.svg": "static/media/twitter-logo-silhouette.447540e1.svg",
-  "static/media/web.svg": "static/media/web.f3fb4aa2.svg"
+  "static/media/nano_iphone.png": "static/media/nano_iphone.a7578bda.png",
+  "static/media/salma_iphone.png": "static/media/salma_iphone.d283cb22.png",
+  "static/media/twitter-logo-silhouette.svg": "static/media/twitter-logo-silhouette.447540e1.svg"
 }
