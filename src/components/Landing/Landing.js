@@ -165,11 +165,30 @@ export default class Landing extends Component {
         </div>
 
         <div className="main-banner-content">
-          <img src={require('../../assets/profile.jpg')} alt="Diego Fuentes" />
-          
-          <span className="banner-title">
+          <div className="banner-title">
            {store.getState().languageData[this.state.language].title} 
-          </span>
+          </div>
+
+          <div className="banner-description">
+            {store.getState().languageData[this.state.language].role} 
+          </div>
+
+          <div className="banner-social-wrapper">
+            <div className="banner-social-icons">
+              <a href="https://twitter.com/DiegoFu_" target="_blank" rel="noopener noreferrer" className="social-item-landing">
+                <img src={require('../../assets/twitter-logo-silhouette.svg')} alt="Twitter Diego Fuentes" />
+              </a>
+              <a href="https://www.linkedin.com/in/diego-fuentes-bb5a67b2/" target="_blank" rel="noopener noreferrer" className="social-item-landing">
+                <img src={require('../../assets/linkedin-logo.svg')} alt="LinkedIn Diego Fuentes" />
+              </a>
+              <a href="https://github.com/Diego-Fu" target="_blank" rel="noopener noreferrer" className="social-item-landing">
+                <img src={require('../../assets/github-logo.svg')} alt="GitHub Diego Fuentes" />
+              </a>
+              <a href={`mailto:diegofu04@gmail.com`} className="social-item-landing">
+                <img src={require('../../assets/envelope.svg')} alt="Mail Diego Fuentes" />
+              </a>
+            </div>
+          </div>
         </div>
 
         <a href="#about-me" className="scroll-arrow">

@@ -24,37 +24,71 @@ export default class AboutMe extends Component {
   render() {
     return (
       <section className="about-me" id="about-me">
-        <div className="about-me-wrapper-text">
-          <p className="about-me-text">
-            {store.getState().languageData[this.state.language].description}
-          </p>
-        </div>
+        <div className="skills-wrapper">
+          <h3 className="skills-title"> {store.getState().languageData[this.state.language].aboutMeTitle} </h3>
 
-        <div className="skills">
-          <div className="skill-item">
-            <img src={require('../../assets/web.svg')} alt="" className="skill-icon" />
-
-            <h3 className="skill-name">
-              {store.getState().languageData[this.state.language].services[0].title}
-            </h3>
-
-            <p className="skill-desc">
-              {store.getState().languageData[this.state.language].services[0].description}
-            </p>
-          </div>
-
-          <div className="skill-item">
-            <img src={require('../../assets/mobile-app.svg')} alt="" className="skill-icon" />
-
-            <h3 className="skill-name">{store.getState().languageData[this.state.language].services[1].title}</h3>
-
-            <p className="skill-desc">
-              {store.getState().languageData[this.state.language].services[1].description}
+          <div className="skills-content">
+            <p>
+              {store.getState().languageData[this.state.language].description} 
             </p>
           </div>
         </div>
-      </section>
 
+        <div className="skills-wrapper">
+          <h3 className="skills-title"> {store.getState().languageData[this.state.language].experienceTitle} </h3>
+
+          <div className="skills-content">
+            <div className="skills-category">
+              <p>
+                {store.getState().languageData[this.state.language].experienceDesc}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="skills-wrapper">
+          <h3 className="skills-title"> {store.getState().languageData[this.state.language].skillsTitle} </h3>
+
+          <div className="skills-content">
+            <div className="skills-category">
+              <span className="skills-category-title">{store.getState().languageData[this.state.language].categoryTitles[0]}</span>
+
+              <ul>
+                <li>&#9633; JavaScript (ES6)</li>
+                <li>&#9633; HTML</li>
+                <li>&#9633; CSS/Sass</li>
+                <li>&#9633; SQL</li>
+              </ul>
+            </div>
+
+            <div className="skills-category">
+              <span className="skills-category-title">{store.getState().languageData[this.state.language].categoryTitles[1]}</span>
+
+              <ul>
+                <li>&#9633; Node</li>
+                <li>&#9633; Express</li>
+                <li>&#9633; React</li>
+                <li>&#9633; React Native</li>
+              </ul>
+            </div>
+
+            <div className="skills-category">
+              <span className="skills-category-title">{store.getState().languageData[this.state.language].categoryTitles[2]}</span>
+
+              <ul>
+                <li>&#9633; Bash</li>
+                <li>&#9633; Git</li>
+                <li>&#9633; NPM</li>
+                <li>&#9633; Gulp</li>
+                <li>&#9633; MongoDB</li>
+                <li>&#9633; Google Chrome DevTools</li>
+                <li>&#9633; Postman</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    </section>
     );
   }
 }
