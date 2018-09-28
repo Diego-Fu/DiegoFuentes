@@ -37,6 +37,9 @@ h3.contact-title{
   border: 0;
   padding: 25px 15px;
   background: none;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
   font-family: 'Nunito';

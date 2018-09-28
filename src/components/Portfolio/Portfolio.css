@@ -11,7 +11,7 @@ section.portfolio {
 
 h1.title-portfolio {
   font-size: 42px;
-  color: #BC3B25;
+  color: #fff;
   font-family: 'Nunito';
   font-weight: 100;
   margin: 0;
@@ -20,7 +20,7 @@ h1.title-portfolio {
 
 .portfolio-wrapper {
   width: 90%;
-  max-width: 860px;
+  max-width: 1024px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -29,8 +29,8 @@ h1.title-portfolio {
 
 .portfolio-wrapper ul li {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: space-between;
   justify-content: space-between;
   margin-bottom: 70px;
 }
@@ -42,28 +42,44 @@ h1.title-portfolio {
 }
 
 .portfolio-wrapper ul li img {
-  height: 440px;
+  height: 250px;
+}
+
+.portfolio-content-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .portfolio-title{
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
+  margin-bottom: 20px;
   color: #fff;
   font-family: 'Nunito';
   font-weight: 100;
-  text-decoration: none;
+}
+
+.portofolio-description {
+  flex: .9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .tech-wrapper {
   margin-top: 10px;
-  width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 span.tech-bubble {
-  border: 1px solid #BC3B25;
+  border: 1px solid #fff;
   padding: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -71,7 +87,7 @@ span.tech-bubble {
   font-family: 'Nunito';
   font-weight: 100;
   font-size: 16px;
-  color: #BC3B25;
+  color: #fff;
 }
 
 a.portfolio-link {
@@ -96,13 +112,48 @@ a.git-link img {
   margin-top: 15px;
 }
 
+.github-wrapper a {
+  text-decoration: none;
+}
+
+p.portfolio-description-text {
+  color: #fff;
+  font-family: 'Nunito';
+  font-weight: 100;
+  font-size: 16px;
+}
+
 @media(max-width: 1024px){
-  .portfolio-wrapper ul li img {
-    height: 400px;
-  }
 
   section.portfolio{
     padding: 40px 0;
+  }
+}
+
+@media(max-width: 864px){
+  .portfolio-wrapper ul li{
+    align-items: center;
+  }
+
+  .portfolio-title{
+    margin-bottom: 15px;
+  }
+
+  .portfolio-content-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portofolio-description {
+    flex-direction: column-reverse;
+  }
+
+  .portfolio-wrapper ul li img {
+    height: 200px;
+  }
+
+  h1.title-portfolio{
+    font-size: 30px;
   }
 }
 
@@ -111,16 +162,7 @@ a.git-link img {
     margin-bottom: 40px;
   }
 
-  .portfolio-wrapper ul li img {
-    height: 300px;
-  }
-
-
   .portofolio-description {
-    width: 100%;
-  }
-
-  .tech-wrapper {
     width: 100%;
   }
 
@@ -141,12 +183,13 @@ a.git-link img {
     width: 80px;
     height: 80px;
   }
+
+    h1.title-portfolio{
+    font-size: 28px;
+  }
 }
 
 @media(max-width: 480px){
-  .portfolio-wrapper ul li img {
-    height: 200px;
-  }
 
   span.tech-bubble {
     font-size: 12px;
@@ -158,5 +201,9 @@ a.git-link img {
 
   section.portfolio{
     padding: 20px 0;
+  }
+  
+  .portfolio-wrapper ul li img {
+    height: 150px;
   }
 }

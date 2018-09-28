@@ -52,6 +52,7 @@ h3.skills-title {
 .skills-category ul {
   list-style-type: none;
   padding: 0;
+  padding-left: 15px;
   width: 150px;
 }
 
@@ -61,6 +62,7 @@ h3.skills-title {
   font-weight: 100;
   font-family: 'Nunito';
   margin: 7px 0;
+  text-indent: -10px;
 }
 
 @media(max-width: 1024px){

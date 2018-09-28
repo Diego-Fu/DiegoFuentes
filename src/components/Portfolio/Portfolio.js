@@ -29,53 +29,74 @@ export default class Portfolio extends Component {
         <div className="portfolio-wrapper">
           <ul>
             <li>
-              <div className="portofolio-description">
-                <a href="http://instructorestacticos.com" target="_blank" rel="noopener noreferrer"  className="portfolio-title">Instructores Tácticos</a>
-                
-                <div className="tech-wrapper">
-                  <span className="tech-bubble">React.js</span>
-                  <span className="tech-bubble">Sass</span>
-                  <span className="tech-bubble">HTML</span>
-                  <span className="tech-bubble">ES6</span>
-                  <span className="tech-bubble">Git</span>
+              <a href="http://instructorestacticos.com" target="_blank" rel="noopener noreferrer" className="portfolio-title">Instructores Tácticos</a>
+
+              <div className="portfolio-content-item">
+                <img src={require('../../assets/git.png')} alt="" />
+
+                <div className="portofolio-description">
+                  <div className="tech-wrapper">
+                    <span className="tech-bubble">React.js</span>
+                    <span className="tech-bubble">Sass</span>
+                    <span className="tech-bubble">HTML</span>
+                    <span className="tech-bubble">ES6</span>
+                    <span className="tech-bubble">Git</span>
+                  </div>
+
+                  <p className="portfolio-description-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                  </p>
                 </div>
               </div>
-              
-              <img src={require('../../assets/git_iphone.png')} alt=""/>
             </li>
 
             <li>
-              <div className="portofolio-description">
-                <a href="http://nanogasa.com/" target="_blank" rel="noopener noreferrer" className="portfolio-title">Nano Gasa</a>
+              <a href="http://nanogasa.com/" target="_blank" rel="noopener noreferrer" className="portfolio-title">Nano Gasa</a>
 
+              <div className="portfolio-content-item">
+                <img src={require('../../assets/nano.png')} alt="" />
 
-                <div className="tech-wrapper">
-                  <span className="tech-bubble">React.js</span>
-                  <span className="tech-bubble">Sass</span>
-                  <span className="tech-bubble">HTML</span>
-                  <span className="tech-bubble">ES6</span>
-                  <span className="tech-bubble">Git</span>
+                <div className="portofolio-description">
+                  <div className="tech-wrapper">
+                    <span className="tech-bubble">React.js</span>
+                    <span className="tech-bubble">Sass</span>
+                    <span className="tech-bubble">HTML</span>
+                    <span className="tech-bubble">ES6</span>
+                    <span className="tech-bubble">Git</span>
+                  </div>
+
+                  <p className="portfolio-description-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                    <br/><br/>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                  </p>
                 </div>
               </div>
-
-              <img src={require('../../assets/nano_iphone.png')} alt="" />
             </li>
 
             <li>
-              <div className="portofolio-description">
-                <a href="http://salmaspa.com.mx" target="_blank" rel="noopener noreferrer" className="portfolio-title">Salma Spa</a>
+              <a href="http://salmaspa.com.mx" target="_blank" rel="noopener noreferrer" className="portfolio-title">Salma Spa</a>
 
+              <div className="portfolio-content-item">
+                <img src={require('../../assets/salma.png')} alt="" />
 
-                <div className="tech-wrapper">
-                  <span className="tech-bubble">React.js</span>
-                  <span className="tech-bubble">Sass</span>
-                  <span className="tech-bubble">HTML</span>
-                  <span className="tech-bubble">ES6</span>
-                  <span className="tech-bubble">Git</span>
+                <div className="portofolio-description">
+                  <div className="tech-wrapper">
+                    <span className="tech-bubble">React.js</span>
+                    <span className="tech-bubble">Sass</span>
+                    <span className="tech-bubble">HTML</span>
+                    <span className="tech-bubble">ES6</span>
+                    <span className="tech-bubble">Git</span>
+                  </div>
+
+                  <p className="portfolio-description-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                    <br/><br/>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos veritatis asperiores dolor nemo! Temporibus error eligendi beatae recusandae quaerat eaque ab neque vero? Praesentium aliquam at voluptatibus nisi alias?
+                  </p>
                 </div>
               </div>
-
-              <img src={require('../../assets/salma_iphone.png')} alt="" />
             </li>
           </ul>
 
@@ -89,7 +110,6 @@ export default class Portfolio extends Component {
             </a>
 
           </div>
-
         </div>
       </section>
     );

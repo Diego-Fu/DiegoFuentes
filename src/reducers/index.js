@@ -1,8 +1,15 @@
 import { SWITCH_LANGUAGE } from '../actions/types';
 import lang from '../translations/translations.js';
 
+
+let langSelected = 'es';
+
+if (window.location.pathname.replace(/^\/([^/]*).*$/, '$1') === 'en'){
+  langSelected = 'en'
+}
+
 const initialState = {
-  language: 'es',
+  language: langSelected,
   languageData: lang
 };
 
