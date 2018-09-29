@@ -26,14 +26,14 @@ export default class Landing extends Component {
       <section className="banner-wrapper" id="banner">
         <div className="lang-selector">
           <Link 
-            className="lang-btn" 
+            className={"lang-btn " + (store.getState().language === 'es' ? 'active' : '')}
             onClick={() => { this.setLanguage('es') }} 
             to="/">
               ES
           </Link>
           
           <Link 
-            className="lang-btn" 
+            className={"lang-btn " + (store.getState().language === 'en' ? 'active' : '')}
             onClick={() => { this.setLanguage('en') }} 
             to="/en">
               EN

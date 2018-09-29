@@ -17,9 +17,10 @@ export default class Routing extends Component {
         <Router>
           <div>
             <div>
-            <Route path={process.env.PUBLIC_URL + '/(|en)/'} exact  component={Home} />
+              <Route path={process.env.PUBLIC_URL + '/(|en)/'} exact  component={Home} />
               <Route path={'/blog'} exact component={Blog} />
             </div>
+            
             <Footer />
           </div>
         </Router>
