@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import ScrollReveal from 'scrollreveal';
 import { store } from '../../stores/index'; 
 import './AboutMe.css';
 
@@ -12,6 +13,9 @@ export default class AboutMe extends Component {
     store.subscribe(() => {
       this.updateLanguage();
     });
+
+
+    ScrollReveal().reveal('.skills-title, .skills-content p, .skills-category ul', { easing: 'ease-in'});
   }
 
   updateLanguage = () => {

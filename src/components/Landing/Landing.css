@@ -155,8 +155,9 @@ img.arrow-down {
 }
 
 .lang-btn.active{
-  color: #BC3B25;
-  border-color: #BC3B25;
+  color: #bc3b25;
+  border-color: rgba(255,255,255,1);
+  background: rgba(255,255,255,0.5);
 }
 
 

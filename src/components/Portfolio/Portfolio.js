@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import ScrollReveal from 'scrollreveal';
 import { store } from '../../stores/index'; 
 import './Portfolio.css';
 
@@ -12,6 +13,20 @@ export default class Portfolio extends Component {
     store.subscribe(() => {
       this.updateLanguage();
     });
+
+    ScrollReveal().reveal('.title-portfolio', { easing: 'ease-in' });
+    ScrollReveal().reveal('.portfolio-content-item img', { distance: '150px', origin: 'left', delay: 300 });
+    ScrollReveal().reveal('.portofolio-description', { distance: '150px', origin: 'right', delay: 300 });
+
+
+    ScrollReveal().reveal('.git-link', {
+      rotate: {
+        x: 20,
+        z: 20
+      },
+      delay: 500
+    });
+    
   }
 
   updateLanguage = () => {

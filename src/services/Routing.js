@@ -9,7 +9,7 @@ import Blog from '../components/Blog/Blog';
 export default class Routing extends Component {
   componentDidMount(){
     viewportUnitsBuggyfill.init();
-    let scroll = new SmoothScroll('a[href*="#"]');
+    new SmoothScroll('a[href*="#"]');
   }
 
   render() {

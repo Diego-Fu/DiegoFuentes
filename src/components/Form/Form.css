@@ -47,6 +47,11 @@ h3.contact-title{
   outline: none;
   box-sizing: border-box;
   border-radius: 0;
+  transition: .2s;
+}
+
+.input-form.incorrect {
+  border: 2px solid red;
 }
 
 .input-form::placeholder {
@@ -61,10 +66,10 @@ h3.contact-title{
 
 button.submit-contact {
   background: none;
-  border: 1px solid #000000;
+  border: 1px solid #fff;
   padding: 15px 0;
   width: 100%;
-  color: #000000;
+  color: #fff;
   font-family: 'Nunito';
   font-size: 24px;
   font-weight: 100;
@@ -72,16 +77,20 @@ button.submit-contact {
   transition: .2s;
 }
 
-button.submit-contact.complete-form {
-  color: #fff;
-  border: 2px solid #fff;
-  cursor: pointer;
+button.submit-contact.complete-form:hover,button.submit-contact.complete-form {
+  background-color: #fff;
+  color: #0075A2;
+  border: 2px solid #0075A2;
 }
 
-button.submit-contact.complete-form:hover {
-  color: #fff;
-  border: 2px solid #fff;
-  transform: scale(1.1);
+button.submit-contact.complete-form:hover{
+  transform: scale(1.08);
+}
+
+button.submit-contact.complete-form:focus {
+  background-color: #fff;
+  color: #0075A2;
+  border: 2px solid #0075A2;
 }
 
 span.visit-site {

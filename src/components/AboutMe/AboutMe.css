@@ -105,6 +105,7 @@ h3.skills-title {
     list-style-type: none;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-left: 25px;
   }
 
   .skills-category ul li {

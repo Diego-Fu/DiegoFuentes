@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import ScrollReveal from 'scrollreveal';
 import { store } from '../../stores/index';
 import { switchLanguage } from '../../actions/index';
 import './Landing.css';
@@ -15,6 +16,10 @@ export default class Landing extends Component {
     this.setState({
       language: store.getState().language
     })
+  }
+
+  componentDidMount(){
+    ScrollReveal().reveal('.banner-title, .banner-description, .banner-social-icons', { easing: 'ease-in', duration: 500 });
   }
 
   setLanguage = (language) => {

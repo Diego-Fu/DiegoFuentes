@@ -13,7 +13,7 @@ module.exports = {
     portfolioDescriptions: [
       'GIT: Instructores Tácticos es un proyecto en el cuál lo que yo realize fue una interfaz construida en react.js, este sitio fue realizado en mente en un futuro cargar contenido dinámicamente desde el backend. \n\n También use express.js con una librería, node mailer, para poder mandar formularios de contacto.',
       'Nano Gasa es un sencillo proyecto en el cuál requería ser muy elegante y sencillo en cuánto diseño y animaciones, el sitio esta construido en dos idiomas, el cliente menciono que el tener un sitio web donde los consumidores puedan encontrar su contenido presentado de forma simple y directa le ha traído un mayor interés del mercado a su producto.',
-      'Salma Spa necesitaba tener un lugar donde centralizar toda la información de sus servicios y tener un medio para dar soporte a sus clientes, esta web contiene más de 14 secciones de contenido sobre servicios de spa y masaje. \n\n Lo que realicé además de la interfaz fue organizar y posicionar de la mejor manera todo su contenido del sitio web, cuidado que el cliente tenga la mejor experiencia de usuario.'
+      'Salma Spa necesitaba tener un lugar donde centralizar toda la información de sus servicios y tener un medio para dar soporte a sus clientes, esta web contiene más de 14 secciones de contenido sobre servicios de spa y masaje. \n\n Lo que realicé además de la interfaz fue organizar y posicionar de la mejor manera todo su contenido del sitio web, cuidando que el cliente tenga la mejor experiencia de usuario.'
     ],
     gitTitle: 'Más proyectos en GitHub',
     formTitle: '¿Tienes un proyecto en mente?',

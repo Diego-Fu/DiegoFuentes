@@ -32,7 +32,7 @@ h1.title-portfolio {
   flex-direction: column;
   align-items: space-between;
   justify-content: space-between;
-  margin-bottom: 70px;
+  margin-bottom: 140px;
 }
 
 .portfolio-wrapper ul {
@@ -153,6 +153,10 @@ p.portfolio-description-text {
     height: 200px;
   }
 
+  .portfolio-wrapper ul li {
+    margin-bottom: 70px;
+  }
+
   h1.title-portfolio{
     font-size: 30px;
   }
@@ -206,5 +210,9 @@ p.portfolio-description-text {
   
   .portfolio-wrapper ul li img {
     height: 150px;
+  }
+
+  .portfolio-wrapper ul li {
+    margin-bottom: 30px;
   }
 }
