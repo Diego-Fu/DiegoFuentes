@@ -212,8 +212,8 @@ export default class Footer extends Component {
           {this.state.showMsg &&
             <div className={"status-msg " + (this.props.statusMsg ? 'error-msg' : 'show-msg')}>
               {this.state.statusMsg ?
-                ('Success!') :
-                ('Error!')
+              (store.getState().languageData[this.state.language].btnSuccess) :
+              (store.getState().languageData[this.state.language].btnError)
               }
             </div>
           }

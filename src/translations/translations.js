@@ -17,8 +17,9 @@ module.exports = {
     ],
     gitTitle: 'Más proyectos en GitHub',
     formTitle: '¿Tienes un proyecto en mente?',
-    formInput: ['nombre', 'asunto', 'email', 'mensaje', 'Enviar']
-
+    formInput: ['nombre', 'asunto', 'email', 'mensaje', 'Enviar'],
+    btnSuccess: 'Éxito!',
+    btnError: 'Hubo un error ):'
   },
   en: {
     title: "Hi!, I'm Diego Fuentes",
@@ -33,12 +34,14 @@ module.exports = {
     categoryTitles: ['LANGUAGES', 'FRAMEWORKS', 'TOOLS'],
     titlePortfolio: 'Portfolio',
     portfolioDescriptions: [
-      'GIT: Instructores Tácticos es un proyecto en el cuál lo que yo realize fue una interfaz construida en react.js, este sitio fue realizado en mente en un futuro cargar contenido dinámicamente desde el backend. \n\n También use express.js con una librería, node mailer, para poder mandar formularios de contacto.',
-      'Nano Gasa es un sencillo proyecto en el cuál requería ser muy elegante y sencillo en cuánto diseño y animaciones, el sitio esta construido en dos idiomas, el cliente menciono que el tener un sitio web donde los consumidores puedan encontrar su contenido presentado de forma simple y directa le ha traído un mayor interés del mercado a su producto.',
-      'Salma Spa necesitaba tener un lugar donde centralizar toda la información de sus servicios y tener un medio para dar soporte a sus clientes, esta web contiene más de 14 secciones de contenido sobre servicios de spa y masaje. \n\n Lo que realicé además de la interfaz fue organizar y posicionar de la mejor manera todo su contenido del sitio web, cuidado que el cliente tenga la mejor experiencia de usuario.'
+      'GIT: Tactical Instructors is a project in which what I did was build an interface on react.js, this site was made thinking in the future to load content dynamically from the backend. \n\n I used express.js for the backend with node mailer to be able to send contact forms.',
+      'Nano Gasa is a simple project in which is required to be very elegant and simple in how design and animations, the site is built in two languages, the client mentioned that having a website where consumers can find their content presented in a simple way has brought greater market interest to your product.',
+      'Salma Spa required to have a website to centralize all the information of its services and have a means to support its customers, this website contains more than 14 content sections on spa and massage services. What I did in addition to the interface was to organize and position in the best way all its website content, taking care that the client has the best user experience.'
     ],
     formTitle: "Let's Work together!",
-    formInput: ['name', 'subject', 'email', 'message', 'Send']
+    formInput: ['name', 'subject', 'email', 'message', 'Send'],
+    btnSuccess: 'Success!',
+    btnError: 'Something went wrong ):'
   }
 }
 
