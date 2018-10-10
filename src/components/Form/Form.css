@@ -75,12 +75,15 @@ button.submit-contact {
   font-weight: 100;
   margin-top: 15px;
   transition: .2s;
+  opacity: .3;
+  cursor: pointer;
 }
 
 button.submit-contact.complete-form:hover,button.submit-contact.complete-form {
   background-color: #fff;
   color: #0075A2;
   border: 2px solid #0075A2;
+  opacity: 1;
 }
 
 button.submit-contact.complete-form:hover{
@@ -100,6 +103,44 @@ span.visit-site {
   color: #ffffff;
   padding: 5px;
   font-family: 'Nunito'
+}
+
+.status-msg{
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Nunito';
+  font-weight: 100;
+}
+
+.status-msg.show-msg{
+  background: rgb(11,181,72);
+}
+
+.status-msg.error-msg{
+  background: red;
+}
+
+.error-msg{
+  color: #fff;
+}
+
+.show-msg{
+  color: white
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.6);
 }
 
 @media(max-width: 768px){

@@ -20,7 +20,10 @@ export default class Footer extends Component {
         subject: false,
         email:   false,
       },
-      formPristine: true
+      formPristine: true,
+      statusMsg: false,
+      showMsg: false,
+      modalLoading: false,
     }
     
   }
@@ -104,12 +107,14 @@ export default class Footer extends Component {
   }
 
 
-  sendForm(event){
+  sendForm = (event) =>{
     event.preventDefault();
 
+    this.setState({
+      modalLoading: true
+    })
+
     if (this.state.validate.name === true &&  this.state.validate.subject === true && this.state.validate.email === true){
-      console.log(server + '/contact');
-      
       axios.post(server + '/contact', {
         name: this.state.name,
         subject: this.state.subject,
@@ -117,10 +122,18 @@ export default class Footer extends Component {
         message: this.state.message
       })
         .then((response) => {
-          console.log(response);
+          this.setState({
+            showMsg: true,
+            statusMsg: true,
+            modalLoading: false,
+          });
         })
         .catch((error) => {
-          console.log(error);
+          this.setState({
+            showMsg: true,
+            statusMsg: false,
+            modalLoading: false
+          })
         });
     }else{
       console.log('nope');
@@ -130,7 +143,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form action="" className="form-contact" onSubmit={(event) => {this.sendForm(event)}}>
+        <form action="" id="form-contact" className="form-contact" onSubmit={(event) => {this.sendForm(event)}}>
           <h3 className="contact-title">
             {store.getState().languageData[this.state.language].formTitle}
           </h3>
@@ -164,7 +177,6 @@ export default class Footer extends Component {
             type="email" 
             name="email" 
             id="email" 
-            autoComplete="off"
             value={this.state.email}
             onChange={this.handleEmail.bind(this)}
             onBlur={this.validateEmail}
@@ -184,17 +196,33 @@ export default class Footer extends Component {
             placeholder={store.getState().languageData[this.state.language].formInput[3]}>
           </textarea>
 
-          <button 
-            className={"submit-contact " + (
-              this.state.formPristine === false && 
-              this.state.validate.name === true &&
-              this.state.validate.subject === true &&
-              this.state.validate.email === true ? 'complete-form' : ' '
-            )}  
-            type="submit">
-            {store.getState().languageData[this.state.language].formInput[4]}
-          </button>
+          {!this.state.showMsg &&
+              <button 
+                className={"submit-contact " + (
+                  this.state.formPristine === false && 
+                  this.state.validate.name === true &&
+                  this.state.validate.subject === true &&
+                  this.state.validate.email === true ? 'complete-form' : ' '
+                )}  
+                type="submit">
+                {store.getState().languageData[this.state.language].formInput[4]}
+              </button>
+          }
 
+          {this.state.showMsg &&
+            <div className={"status-msg " + (this.props.statusMsg ? 'error-msg' : 'show-msg')}>
+              {this.state.statusMsg ?
+                ('Success!') :
+                ('Error!')
+              }
+            </div>
+          }
+          
+          {this.state.modalLoading &&
+            <div className="modal">
+              <img src={require('../../assets/loading.gif')} alt="" />
+            </div>
+          }
 
         </form>
       </div>
