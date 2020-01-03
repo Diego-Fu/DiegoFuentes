@@ -11,7 +11,7 @@ export default class Home extends Component {
         <Landing />
         <AboutMe/> 
         <Portfolio/>
-        <Form/>
+    
       </div>
     );
   }

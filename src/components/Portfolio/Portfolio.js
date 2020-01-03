@@ -44,6 +44,48 @@ export default class Portfolio extends Component {
         <div className="portfolio-wrapper">
           <ul>
             <li>
+                <a href="https://www.hereyouwin.com/home" target="_blank" rel="noopener noreferrer" className="portfolio-title">Here You Win</a>
+
+                <div className="portfolio-content-item">
+                  <img src={require('../../assets/hyw.png')} alt="" />
+
+                  <div className="portofolio-description">
+                    <div className="tech-wrapper">
+                      <span className="tech-bubble">Angular 6</span>
+                      <span className="tech-bubble">Sass</span>
+                      <span className="tech-bubble">Stripe</span>
+                      <span className="tech-bubble">Moment</span>
+                    </div>
+
+                    <p className="portfolio-description-text">
+                      {store.getState().languageData[this.state.language].portfolioDescriptions[4]}
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+            <li>
+                <a href="https://www.tudiscovery.com" target="_blank" rel="noopener noreferrer" className="portfolio-title">Discovery Channel Latam/Brasil (2019)</a>
+
+                <div className="portfolio-content-item">
+                  <img src={require('../../assets/discovery.png')} alt="" />
+
+                  <div className="portofolio-description">
+                    <div className="tech-wrapper">
+                      <span className="tech-bubble">Next.js</span>    
+                      <span className="tech-bubble">React</span>             
+                      <span className="tech-bubble">Sass</span>
+                      <span className="tech-bubble">Node/Express.js</span>
+                    </div>
+
+                    <p className="portfolio-description-text">
+                      {store.getState().languageData[this.state.language].portfolioDescriptions[3]}
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+            <li>
               <a href="http://instructorestacticos.com" target="_blank" rel="noopener noreferrer" className="portfolio-title">Instructores Tácticos</a>
 
               <div className="portfolio-content-item">
@@ -85,29 +127,6 @@ export default class Portfolio extends Component {
 
                   <p className="portfolio-description-text">
                     {store.getState().languageData[this.state.language].portfolioDescriptions[1]}
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <a href="http://salmaspa.com.mx" target="_blank" rel="noopener noreferrer" className="portfolio-title">Salma Spa</a>
-
-              <div className="portfolio-content-item">
-                <img src={require('../../assets/salma.png')} alt="" />
-
-                <div className="portofolio-description">
-                  <div className="tech-wrapper">
-                    <span className="tech-bubble">HTML5</span>
-                    <span className="tech-bubble">Sass</span>
-                    <span className="tech-bubble">Gulp.js</span>
-                    <span className="tech-bubble">PHP</span>
-                    <span className="tech-bubble">Google Maps API</span>
-                    <span className="tech-bubble">Google Fonts</span>
-                  </div>
-
-                  <p className="portfolio-description-text">
-                    {store.getState().languageData[this.state.language].portfolioDescriptions[2]}
                   </p>
                 </div>
               </div>

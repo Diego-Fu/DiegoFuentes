@@ -15,11 +15,6 @@ module.exports = {
       url: 'http://salmaspa.com.mx/',
       img: './assets/banner.jpg'
     },
-    {
-      name: 'Propiedades Monarca',
-      url: 'https://diego-fu.github.io/pmonarca-web/#',
-      img: './assets/banner.jpg'
-    }
   ]
 }
 
