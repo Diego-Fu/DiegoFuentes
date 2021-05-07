@@ -44,6 +44,29 @@ export default class Portfolio extends Component {
         <div className="portfolio-wrapper">
           <ul>
             <li>
+                <a href="https://thincrs.com/" target="_blank" rel="noopener noreferrer" className="portfolio-title">Thincrs</a>
+
+                <div className="portfolio-content-item">
+                  <img src={require('../../assets/thincrs.png')} alt="" />
+
+                  <div className="portofolio-description">
+                    <div className="tech-wrapper">
+                      <span className="tech-bubble">Angular 6</span>
+                      <span className="tech-bubble">Sass</span>
+                      <span className="tech-bubble">Stripe</span>
+                      <span className="tech-bubble">Moment</span>
+                    </div>
+
+                    <p className="portfolio-description-text">
+                      {store.getState().languageData[this.state.language].portfolioDescriptions[4]}
+                    </p>
+                  </div>
+                </div>
+            </li>
+
+
+
+            <li>
                 <a href="https://www.hereyouwin.com/home" target="_blank" rel="noopener noreferrer" className="portfolio-title">Here You Win</a>
 
                 <div className="portfolio-content-item">
@@ -62,7 +85,7 @@ export default class Portfolio extends Component {
                     </p>
                   </div>
                 </div>
-              </li>
+            </li>
 
             <li>
                 <a href="https://www.tudiscovery.com" target="_blank" rel="noopener noreferrer" className="portfolio-title">Discovery Channel Latam/Brasil (2019)</a>
